@@ -170,6 +170,7 @@ func processReceipt(c *gin.Context) {
 // GET /receipts/:id/points
 func getPoints(c *gin.Context) {
 	id := c.Param("id")
+	fmt.Println(id)
 	points, ok := receiptID[id]
 	if !ok {
 		c.IndentedJSON(http.StatusNotFound, gin.H{"error": "No receipt found for that id"})
@@ -187,6 +188,12 @@ func getPoints(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
+
+	router.Static("/src", "./src")
+	router.GET("/", func(c *gin.Context) {
+		c.File("./src/index.html")
+	})
+
 	router.POST("/receipts/process", processReceipt)
 	router.GET("/receipts/:id/points", getPoints)
 	// router.GET("/receipts/points", getAllPoints)

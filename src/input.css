@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+    Custom style for table rows
+*/
+.row-style {
+    @apply border border-slate-600;
+}
