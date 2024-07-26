@@ -1,4 +1,4 @@
-This is my submission to the take home challenge for Fetch
+This is a simple web service that takes a receipt in JSON format, calculates points based on items purchased and stores a unique ID that can be accessed via an endpoint.
 
 ---
 
