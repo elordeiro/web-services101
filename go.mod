@@ -2,6 +2,8 @@ module github.com/elordeiro/fetch-take-home
 
 go 1.22.1
 
+retract v0.0.0
+
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.20.0
